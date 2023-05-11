@@ -39,7 +39,16 @@
                         </goals>
                         <configuration>
                             <createDependencyReducedPom>false</createDependencyReducedPom>
-                            <outputFile>C:\Users\A4pap\Desktop\Output\ChatFilter.jar</outputFile>
+                            <relocations>
+                                <relocation>
+                                    <pattern>org.bstats</pattern>
+                                    <shadedPattern>a4.papers.chatfilter.chatfilter.metrics</shadedPattern>
+                                </relocation>
+                                <relocation>
+                                    <pattern>me.hsgamer.hscore</pattern>
+                                    <shadedPattern>a4.papers.chatfilter.chatfilter.hscore</shadedPattern>
+                                </relocation>
+                            </relocations>
                         </configuration>
                     </execution>
                 </executions>
@@ -70,6 +79,16 @@
             <artifactId>spigot-api</artifactId>
             <version>1.18.1-R0.1-SNAPSHOT</version>
             <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.bstats</groupId>
+            <artifactId>bstats-bukkit</artifactId>
+            <version>3.0.2</version>
+        </dependency>
+        <dependency>
+            <groupId>me.hsgamer</groupId>
+            <artifactId>hscore-bukkit-scheduler</artifactId>
+            <version>4.3.4</version>
         </dependency>
     </dependencies>
 </project>
